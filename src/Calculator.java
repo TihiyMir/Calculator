@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+
 public class Calculator {
     public static void main(String[] args) {
         try {
@@ -26,7 +27,7 @@ public class Calculator {
                 throw new IllegalArgumentException("throws Exception");
             }
 
-            int result = 0;
+            int result;
             switch (operator) {
                 case '+':
                     result = number1 + number2;
@@ -49,7 +50,7 @@ public class Calculator {
 
             System.out.println("Результат: " + (isRoman ? (result <= 0 ? "throws Exception" : convertArabicToRoman(result)) : result));
 
-        }  catch (ArithmeticException | IllegalArgumentException e) {
+        } catch (ArithmeticException | IllegalArgumentException e) {
             System.out.println("throws Exception");
         }
     }
